@@ -19,7 +19,7 @@ const MySkill = () => {
       </h1>
       <h2
         className="text-3xl text-washedBlack font-semibold mt-10"
-        data-aos="fade-left"
+        data-aos="fade-up"
         data-aos-duration="0"
         data-aos-delay="400"
       >

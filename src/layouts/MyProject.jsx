@@ -7,7 +7,7 @@ const MyProject = () => {
     AOS.init();
   }, []);
   return (
-    <div>
+    <div id="project">
       <h1
         data-aos="fade-up"
         data-aos-duration="1000"

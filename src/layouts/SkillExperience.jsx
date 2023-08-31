@@ -7,10 +7,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { TypeAnimation } from "react-type-animation";
 const SkillExperience = () => {
-  const [showEducation, setShowEducation] = useState(true);
+  const [activeTab, setActiveTab] = useState("experience"); // State untuk mengatur tab yang aktif
 
-  const toggleDisplay = () => {
-    setShowEducation(!showEducation);
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
   };
   useEffect(() => {
     AOS.init(); // Menginisialisasi AOS
@@ -40,19 +40,24 @@ const SkillExperience = () => {
           <div>
             <div className="justify-center flex">
               <button
-                class="inline-flex items-center justify-center h-12 w-44 gap-2 px-6 text-sm font-medium tracking-wide text-washedBlack focus:text-white hover:text-white transition border-2 border-blueTitmouse duration-300 rounded-l-md focus-visible:outline-none whitespace-nowrap  hover:bg-clearBlue focus:bg-blue-800"
-                onClick={toggleDisplay}
+                className={`${
+                  activeTab === "experience" && `bg-blue-800 text-white`
+                }  inline-flex items-center justify-center h-12 w-44 gap-2 px-6 text-sm font-medium tracking-wide text-washedBlack focus:text-white hover:text-white transition border-l-2 border-y-2 hover:border-r-2 border-blueTitmouse duration-300 rounded-l-md focus-visible:outline-none whitespace-nowrap  hover:bg-clearBlue focus:bg-blue-800`}
+                onClick={() => handleTabChange("experience")}
               >
                 <span>Experience</span>
               </button>
               <button
-                class="inline-flex items-center justify-center h-12 w-44 gap-2 px-6 text-sm font-medium tracking-wide text-washedBlack border-2 active:bg-blueTitmouse hover:text-white focus:text-white border-blueTitmouse transition duration-300  rounded-r-md focus-visible:outline-none whitespace-nowrap hover:bg-clearBlue focus:bg-blue-800"
-                onClick={toggleDisplay}
+                className={` ${
+                  activeTab === "education" && `bg-blue-800 text-white`
+                }inline-flex items-center justify-center h-12 w-44 gap-2 px-6 text-sm font-medium tracking-wide text-washedBlack border-r-2 border-y-2 hover:border-l-2 active:bg-blueTitmouse hover:text-white focus:text-white border-blueTitmouse transition duration-300  rounded-r-md focus-visible:outline-none whitespace-nowrap hover:bg-clearBlue focus:bg-blue-800`}
+                onClick={() => handleTabChange("education")}
               >
                 <span>Education</span>
               </button>
             </div>
-            {showEducation ? <MyExperience /> : <MyEducation />}
+            {activeTab === "education" && <MyEducation />}
+            {activeTab === "experience" && <MyExperience />}
           </div>
         </div>
       </Content>
