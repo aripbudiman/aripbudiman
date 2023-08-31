@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 const HeroSection = () => {
   const handleDownloadClick = () => {
-    const imageUrl = "/public/cv.jpg"; // Path to the image
+    const imageUrl = "/cv.jpg"; // Path to the image
 
     const link = document.createElement("a");
     link.href = imageUrl;
