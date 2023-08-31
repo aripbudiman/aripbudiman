@@ -15,7 +15,7 @@ const MyProject = () => {
       >
         MyProject
       </h1>
-      <div className="grid grid-cols-1 xl:grid-cols-3 5xl:grid-cols-4 gap-5 xl:gap-8">
+      <div className="grid grid-cols-1 mx-5 xl:grid-cols-3 5xl:grid-cols-4 gap-5 xl:gap-8">
         <CardProject foto="/project/dmp1.png">
           Project perusahaan Percetakan yang ada dibekasi, saya buat sendiri
           menggunakan codeigniter 4.

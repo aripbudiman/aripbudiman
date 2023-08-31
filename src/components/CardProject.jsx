@@ -1,10 +1,18 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default function CardProject(props) {
   const { foto, children } = props;
+  useEffect(() => {
+    AOS.init();
+  });
   return (
     <>
-      <div className="overflow-hidden rounded-lg bg-white text-slate-500 shadow-lg shadow-slate-200">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="500"
+        className="overflow-hidden rounded-lg bg-white text-slate-500 shadow-lg shadow-slate-200"
+      >
         <figure>
           <img
             src={foto}

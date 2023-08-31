@@ -19,9 +19,9 @@ const SkillExperience = () => {
     <>
       <div className="bg-chineseGoldfish">
         <Content>
-          <div className="h-80 flex justify-center flex-col items-center text-white">
+          <div className="h-48 xl:h-80 flex justify-center flex-col items-center text-white">
             <h1
-              className="text-7xl font-semibold mb-5"
+              className="text-xl xl:text-7xl font-semibold mb-5"
               data-aos="fade-up"
               data-aos-duration="500"
               data-aos-delay="100"
@@ -29,7 +29,7 @@ const SkillExperience = () => {
               I'm Available for freelancing
             </h1>
             <p
-              className="text-2xl italic"
+              className="text-md xl:text-2xl italic text-center"
               data-aos="fade-up"
               data-aos-duration="500"
               data-aos-delay="100"
@@ -40,7 +40,7 @@ const SkillExperience = () => {
         </Content>
       </div>
       <Content>
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-x-10 px-10 py-20">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-x-10 px-5 xl:px-10 py-10 xl:py-20">
           <MySkill />
           <div>
             <div className="justify-center flex">

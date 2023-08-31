@@ -8,9 +8,9 @@ const MySkill = () => {
     AOS.init();
   });
   return (
-    <div>
+    <div className="mb-10 xl:mb-0">
       <h1
-        className="text-5xl text-washedBlack font-semibold"
+        className="text-3xl xl:text-left text-center xl:text-5xl text-washedBlack font-semibold"
         data-aos="zoom-in-up"
         data-aos-duration="500"
         data-aos-delay="100"
@@ -25,7 +25,7 @@ const MySkill = () => {
       >
         MySkills
       </h2>
-      <div className="mt-10 grid grid-cols-2 gap-5">
+      <div className="mt-10 grid grid-cols-1 xl:grid-cols-2 gap-5">
         <Progresbar skill="HTML/CSS" value="90" />
         <Progresbar skill="JavaScript" value="75" />
         <Progresbar skill="PHP" value="70" />

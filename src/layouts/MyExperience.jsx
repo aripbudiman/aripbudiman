@@ -2,7 +2,7 @@ import React from "react";
 import CardExperience from "../components/CardExperience";
 const MyExperience = () => {
   return (
-    <div className="mt-10 grid grid-cols-2 gap-x-2 gap-y-10">
+    <div className="mt-10 grid xl:grid-cols-2 grid-cols-1 gap-x-2 gap-y-10">
       <CardExperience
         position="Pedagang Chicken"
         tahun="2017 - 2017"
