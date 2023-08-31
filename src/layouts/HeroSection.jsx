@@ -1,4 +1,5 @@
 import React from "react";
+import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
   return (
@@ -13,9 +14,7 @@ const HeroSection = () => {
           <h1 className="font-hammersmith font-semibold text-5xl lg:text-8xl text-reptilianGreen">
             Arip Budiman
           </h1>
-          <h3 className="lg:text-5xl text-2xl font-hammersmith text-washedBlack">
-            Fullstack Web Developer
-          </h3>
+          <Profesi />
           <p className="my-5 text-washedBlack lg:text-xl text-sm">
             Saya adalah web developer yang cetakan, disiplin dan bertanggung
             jawab dalam mengurus hal-hal yang berkaitan dengan web dan ilmu
@@ -32,6 +31,24 @@ const HeroSection = () => {
         </div>
       </div>
     </>
+  );
+};
+
+const Profesi = () => {
+  return (
+    <TypeAnimation
+      sequence={[
+        "Fullstack Web Developer",
+        1000,
+        "Freelancer",
+        1000,
+        "Part Time Developer",
+        1000,
+      ]}
+      speed={20}
+      className="lg:text-5xl text-2xl font-hammersmith text-washedBlack"
+      repeat={Infinity}
+    />
   );
 };
 

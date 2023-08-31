@@ -5,7 +5,7 @@ import MyExperience from "./MyExperience";
 import MyEducation from "./MyEducation";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import { TypeAnimation } from "react-type-animation";
 const SkillExperience = () => {
   const [showEducation, setShowEducation] = useState(true);
 
@@ -20,13 +20,8 @@ const SkillExperience = () => {
       <div className="bg-chineseGoldfish">
         <Content>
           <div className="h-48 xl:h-80 flex justify-center flex-col items-center text-white">
-            <h1
-              className="text-xl xl:text-7xl font-semibold mb-5"
-              data-aos="fade-up"
-              data-aos-duration="500"
-              data-aos-delay="100"
-            >
-              I'm Available for freelancing
+            <h1>
+              <Slogan />
             </h1>
             <p
               className="text-md xl:text-2xl italic text-center"
@@ -62,6 +57,17 @@ const SkillExperience = () => {
         </div>
       </Content>
     </>
+  );
+};
+
+const Slogan = () => {
+  return (
+    <TypeAnimation
+      sequence={[" I'm Available for freelancing", 1500, "", 100]}
+      speed={50}
+      className="text-xl xl:text-7xl font-semibold mb-5"
+      repeat={Infinity}
+    />
   );
 };
 
